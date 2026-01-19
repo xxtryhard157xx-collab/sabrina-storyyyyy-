@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sabrina Story • Passe Premium R$5</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:radial-gradient(circle at top,#0a0f2c,#050510);color:#fff;overflow-x:hidden}
+
+/* HEADER */
+header{
+  padding:16px 20px;
+  background:linear-gradient(90deg,#0b0033,#1b0066);
+  display:flex;align-items:center;justify-content:space-between
+}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-icon{
+  width:40px;height:40px;border-radius:12px;
+  background:linear-gradient(135deg,#ff8a00,#ff00ff);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800
+}
+.logo-text{font-weight:700;font-size:16px;line-height:1.1}
+.logo-text span{font-size:11px;opacity:.7;display:block}
+
+/* HERO */
+.hero{min-height:88vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.card{
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(18px);
+  border-radius:22px;
+  padding:26px;
+  max-width:360px;width:100%;
+  box-shadow:0 0 40px rgba(0,0,0,.6)
+}
+.badge{
+  background:#ff8a00;
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:600;
+  display:inline-block;
+  margin-bottom:10px
+}
+.banner-img{
+  background:linear-gradient(135deg,#ff00ff,#7f00ff);
+  border-radius:16px;
+  height:150px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:34px;font-weight:800;
+  margin-bottom:14px
+}
+h2{text-align:center;margin-bottom:6px}
+.desc{text-align:center;font-size:14px;opacity:.8;margin-bottom:14px}
+
+/* STATS */
+.stats{
+  display:flex;
+  justify-content:space-between;
+  font-size:12px;
+  margin-bottom:14px
+}
+#salesWrap small{display:block;font-size:11px;opacity:.8;margin-top:2px}
+
+/* LIST */
+ul{list-style:none;margin-bottom:14px}
+ul li{font-size:14px;margin:6px 0}
+ul li::before{content:"✔ ";color:#ff8a00}
+
+/* INPUT */
+input{
+  width:100%;padding:14px;
+  border-radius:12px;border:none;
+  margin-bottom:12px;font-size:14px
+}
+
+/* PRICE */
+.price-old{text-align:center;text-decoration:line-through;opacity:.4}
+.price{
+  text-align:center;font-size:34px;font-weight:700;
+  background:linear-gradient(90deg,#00ffcc,#ff8a00);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin:6px 0 14px
+}
+
+/* BUTTON */
+button{
+  width:100%;padding:16px;
+  border:none;border-radius:14px;
+  background:linear-gradient(90deg,#ff8a00,#ffb347);
+  font-weight:700;font-size:16px;cursor:pointer
+}
+button:disabled{opacity:.4;cursor:not-allowed}
+
+/* NOTIFY */
+.notify{
+  position:fixed;bottom:20px;left:20px;
+  background:rgba(0,0,0,.85);
+  backdrop-filter:blur(10px);
+  padding:12px 16px;
+  border-radius:14px;
+  font-size:13px;
+  animation:slide .5s ease
+}
+@keyframes slide{
+  from{transform:translateX(-120%)}
+  to{transform:translateX(0)}
+}
+
+/* VIEWERS */
+.viewers{
+  position:fixed;top:90px;right:20px;
+  background:rgba(0,0,0,.75);
+  backdrop-filter:blur(10px);
+  padding:10px 14px;
+  border-radius:14px;
+  font-size:12px
+}
+
+/* PULSE */
+@keyframes pulseGlow{
+  0%{text-shadow:0 0 0 rgba(255,138,0,0);transform:scale(1)}
+  50%{text-shadow:0 0 14px rgba(255,138,0,.9);transform:scale(1.05)}
+  100%{text-shadow:0 0 0 rgba(255,138,0,0);transform:scale(1)}
+}
+.pulse{animation:pulseGlow .6s ease}
+
+/* CONFIRMAÇÃO */
+#confirmBox{
+  display:none;position:fixed;top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,.9);
+  backdrop-filter:blur(10px);
+  z-index:9999;
+  align-items:center;justify-content:center
+}
+#confirmBox .box{
+  background:#111;padding:26px;
+  border-radius:18px;max-width:340px;width:100%;
+  text-align:center
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">SS</div>
+    <div class="logo-text">
+      SABRINA STORY
+      <span>Premium</span>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="card">
+    <div class="badge">MAIS VENDIDO</div>
+    <div class="banner-img">PASSE</div>
+
+    <h2>Passe Premium</h2>
+    <p class="desc">Passe completo com recompensas exclusivas</p>
+
+    <div class="stats">
+      <span id="salesWrap">
+        🔥 <b id="salesCount">8.742</b> vendidos
+        <small id="todaySales">+12 vendidos hoje</small>
+      </span>
+      <span>⚡ Entrega rápida</span>
+    </div>
+
+    <ul>
+      <li>Skins Exclusivas</li>
+      <li>Cartão 100% EXP</li>
+      <li>Recompensas Premium</li>
+    </ul>
+
+    <input id="playerId" type="number" placeholder="Digite o ID do Jogador" oninput="checkID()">
+
+    <div class="price-old">R$ 9,99</div>
+    <div class="price">R$ 5,00</div>
+
+    <button id="payBtn" disabled onclick="pay()">Comprar Agora</button>
+  </div>
+</section>
+
+<div class="viewers" id="viewers">👀 12 pessoas vendo agora</div>
+
+<div id="confirmBox">
+  <div class="box" id="confirmContent"></div>
+</div>
+
+<script>
+/* ===== CONFIG ===== */
+let sales = 8742;
+let today = 12;
+const maxSales = 9200;
+const nomes = ["Fulano","Ana","Lucas","João","Marcos","Julia","Pedro","Rafael"];
+
+/* ===== ELEMENTS ===== */
+const salesEl = document.getElementById("salesCount");
+const todayEl = document.getElementById("todaySales");
+
+/* ===== FUNCTIONS ===== */
+function renderSales(){
+  salesEl.textContent = sales.toLocaleString("pt-BR");
+  todayEl.textContent = "+"+today+" vendidos hoje";
+  salesEl.classList.add("pulse");
+  setTimeout(()=>salesEl.classList.remove("pulse"),600);
+}
+
+function incrementSale(qty=1){
+  if(sales < maxSales){
+    sales += qty;
+    today += qty;
+    renderSales();
+  }
+}
+
+function checkID(){
+  const id=document.getElementById("playerId").value;
+  document.getElementById("payBtn").disabled=id.length<6;
+}
+
+function pay(){
+  const id=document.getElementById("playerId").value;
+  localStorage.setItem("playerID",id);
+  document.getElementById("confirmContent").innerHTML=`
+    <h2>💳 Confirmação</h2>
+    <p style="margin:12px 0;font-size:14px">
+      ID do Jogador:<br><b>${id}</b><br><br>
+      Após pagar, clique em <b>Já paguei</b>
+    </p>
+    <button onclick="confirmPayment()">Já paguei</button>
+  `;
+  document.getElementById("confirmBox").style.display="flex";
+  window.open("https://mpago.la/1k4G4gZ","_blank");
+}
+
+function confirmPayment(){
+  const id=localStorage.getItem("playerID");
+  document.getElementById("confirmContent").innerHTML=`
+    <h2>✅ Pagamento enviado!</h2>
+    <p style="margin-top:12px;font-size:14px">
+      ID do jogador:<br><b>${id}</b><br>
+      Aguarde a entrega 💎
+    </p>
+  `;
+}
+
+/* ===== PROVA SOCIAL ===== */
+setInterval(()=>{
+  const nome=nomes[Math.floor(Math.random()*nomes.length)];
+  const n=document.createElement("div");
+  n.className="notify";
+  n.innerHTML="💎 <b>"+nome+"</b> acabou de comprar<br><small>agora mesmo</small>";
+  document.body.appendChild(n);
+  setTimeout(()=>n.remove(),4000);
+  incrementSale(Math.floor(Math.random()*3)+1);
+},8000);
+
+/* ===== VIEWERS ===== */
+setInterval(()=>{
+  const v=Math.floor(Math.random()*10)+8;
+  document.getElementById("viewers").innerHTML="👀 "+v+" pessoas vendo agora";
+},5000);
+
+/* ===== GROWTH ===== */
+setInterval(()=>incrementSale(1),Math.floor(Math.random()*5000)+4000);
+renderSales();
+</script>
+
+</body>
+</html>
